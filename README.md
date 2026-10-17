@@ -2,18 +2,23 @@
 
 An interactive dashboard of the Quran's structure, built as a single static page.
 
+This is not original scholarship: it gathers the research of classical and modern scholars into one useful place. I ask Allah for His guidance and His forgiveness for any mistake made here.
+
 **What it shows**
 
 - The full list of 114 surahs, arranged by **mushaf order**, **Meccan / Medinan**, or **revelation order**, with a Meccan/Medinan filter in a toolbar that stays on screen
 - A **Mecca vs Medina** contrast: belief in the Meccan period, community-building in the Medinan period
 - **Amin Ahsan Islahi's seven groups**, each moving from Meccan to Medinan surahs; click any bar segment for example verses
 - **Surah pairs**, with notes on the best-known pairs
+- **Al-Fatihah's five stages** and the answer to each (Sahih Muslim 395), and how al-Baqarah 2:2 answers its prayer for guidance
+- The **ring structure of al-Baqarah**: tap any section to see it beside its mirror, centred on verse 143
 - **Links between neighbouring surahs** (munasabat), from the classical works of al-Biqa'i and as-Suyuti
+- A contents bar with bookmarks to every section, and shareable links on each heading
 - Hover over (or tap) any heading marked **ⓘ** to see its sources
 
 ## View it
 
-Once GitHub Pages is on, the site is served at `https://<your-username>.github.io/quran-order-map/`.
+Live site: **https://ihinds.github.io/quran-order-map/**
 
 ## Sources
 
@@ -23,6 +28,8 @@ Once GitHub Pages is on, the site is served at `https://<your-username>.github.i
 - Amin Ahsan Islahi, *Tadabbur-i-Qur'an*
 - Jalal al-Din as-Suyuti, *al-Itqan fi 'Ulum al-Qur'an* and *Tanasuq al-Durar*
 - Burhan al-Din al-Biqa'i, *Nazm al-Durar*
+- Raymond Farrin, *Structure and Qur'anic Interpretation* (White Cloud Press, 2014)
+- Sahih Muslim 395, on [sunnah.com](https://sunnah.com/muslim:395)
 - Verse references link to [Quran.com](https://quran.com)
 
 ## Notes
