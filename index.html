@@ -220,6 +220,29 @@ footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
 .rlink b{font-family:var(--label);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);display:block;margin-bottom:2px}
 @media (max-width:520px){.fat{grid-template-columns:1fr}.fat-band{grid-column:1;justify-content:flex-start;text-align:left;border-right:0;border-bottom:3px solid var(--line);padding:6px 0}.fat-band.a{border-bottom-color:var(--mecca)}.fat-band.b{border-bottom-color:var(--ink)}.fat-band.c{border-bottom-color:var(--medina)}.fat-steps{grid-column:1}}
 @media (max-width:520px){.row{grid-template-columns:36px minmax(0,1fr)}.meta{grid-column:2;flex-direction:row;align-items:center;justify-content:flex-start}}
+
+/* Unified scale: h1 page title, h2 section, h3 card/group, labels; every section = part label, heading, intro, content */
+:root{--fs-h1:clamp(34px,4.4vw,48px);--fs-h2:clamp(25px,2.8vw,31px);--fs-h3:19px;--fs-body:16px;--fs-small:14.5px;--fs-label:12px;--sect-gap:clamp(48px,6vw,76px)}
+h1,.sect h2,.ghead h3,.cc h3,.detail h3,.rcard h3,.lk-h{text-wrap:balance}
+.mast h1{font-family:var(--display);font-weight:600;font-size:var(--fs-h1);letter-spacing:-.01em;line-height:1.1}
+.sect{margin-top:var(--sect-gap);padding-top:clamp(24px,3vw,34px);border-top:1px solid var(--line)}
+#overview{margin-top:clamp(28px,4vw,44px);border-top:0;padding-top:0}
+.sect>.eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:0 0 8px}
+.part{font-weight:600;color:var(--bg);background:var(--accent);padding:2px 8px;border-radius:4px;letter-spacing:.06em}
+.sect>h2{font-family:var(--display);font-weight:600;font-size:var(--fs-h2);line-height:1.18;letter-spacing:-.005em;margin:0 0 10px}
+.sect>p{font-size:var(--fs-body);color:var(--muted);max-width:68ch;margin:0 0 18px;line-height:1.6}
+.sect>p:last-child{margin-bottom:0}
+#overview>p{color:var(--ink)}
+#overview>p.mast-note{color:var(--muted);font-size:var(--fs-small)}
+.ghead{border-bottom:1.5px solid var(--ink);padding-bottom:6px;margin-bottom:10px}
+.ghead h3{font-family:var(--display);font-weight:600;font-size:var(--fs-h3);margin:0;line-height:1.3}
+.group{margin-top:28px}
+.cc h3,.detail h3,.rcard h3{font-family:var(--display);font-weight:600;font-size:var(--fs-h3);line-height:1.3}
+.lk-h{font-size:13.5px}
+.eyebrow{font-size:var(--fs-label)}
+.blocks,.ring,.fat,.spine-box,.contrast,.links,.answer,.rdetail{margin-top:4px}
+.list-wrap .toolbar{margin-top:18px}
+@media (max-width:520px){.sect>h2{font-size:24px}.mast h1{font-size:32px}}
 </style>
 
 </head>
@@ -254,7 +277,7 @@ footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
   </section>
 
   <section class="sect" id="orders-sect">
-    <div class="eyebrow">114 surahs · 6,236 verses (Kufan count)</div>
+    <div class="eyebrow"><span class="part">Part 1</span>114 surahs · 6,236 verses</div>
     <h2 data-src="tanzilmeta,tanzilorder,saleem">The Quran, in two orders</h2>
     <p>The mushaf is not arranged in the order of revelation. Switch the chart between the mushaf order, a Meccan / Medinan split, and the order of revelation; hover over a bar to see which surah it is.</p>
   <div class="spine-box" aria-label="Each bar is one surah; bar height shows its length">
@@ -274,7 +297,7 @@ footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
   </section>
 
   <section class="sect" id="contrast-sect">
-    <div class="eyebrow">Two phases of the mission</div>
+    <div class="eyebrow"><span class="part">Part 2</span>Two phases of the mission</div>
     <h2 data-src="itqan,tanzilorder">Mecca builds belief. Medina builds a community.</h2>
     <p>In Mecca the Muslims were a persecuted minority with no state, so revelation shaped what they believed and who they were. In Medina they became a community with a city to run, so revelation added laws, institutions and rules for living together. These are strong tendencies, not rigid rules: Meccan surahs teach ethics, and Medinan surahs still teach belief.</p>
     <div class="contrast">
@@ -298,7 +321,7 @@ footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
   </section>
 
   <section class="sect" id="blocks-sect">
-    <div class="eyebrow">Islahi's seven groups</div>
+    <div class="eyebrow"><span class="part">Part 3</span>Islahi's seven groups</div>
     <h2 data-src="saleem,mir,wiki">Seven blocks, one repeated movement</h2>
     <p>The groups follow the mushaf order: each one is a consecutive run of surahs exactly as they sit in the mushaf, from Group I (surahs 1–5) to Group VII (67–114). Each group opens with Meccan surahs that lay down belief and closes with Medinan surahs that build the community on it. The pattern runs seven times, each with a different central theme. Segment width shows the number of surahs; blue and gold here follow Islahi's own Meccan/Medinan reading of each group. <b>Tap any segment</b> to see verses from it.</p>
     <div class="blocks" id="blocks"></div>
@@ -307,7 +330,7 @@ footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
   </section>
 
   <div class="list-wrap">
-  <div class="sect" id="list-sect"><div class="eyebrow">Every surah</div><h2 data-src="tanzilmeta,tanzilorder,saleem">The full list</h2></div>
+  <div class="sect" id="list-sect"><div class="eyebrow"><span class="part">Part 4</span>Every surah</div><h2 data-src="tanzilmeta,tanzilorder,saleem">The full list</h2><p>Every surah with its Arabic name, meaning, theme, verse count, type and place in the order of revelation. Arrange and filter it with the bar below, which stays on screen while you scroll.</p></div>
   <div class="toolbar" id="toolbar">
     <div class="tgroup"><span class="tlab">Arrange</span>
       <div class="seg" role="group" aria-label="Arrange the list">
@@ -328,7 +351,7 @@ footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
   </div>
 
   <section class="sect" id="fatiha-sect">
-    <div class="eyebrow">The opening · Surah 1 · 7 verses</div>
+    <div class="eyebrow"><span class="part">Part 5</span>The opening · Surah 1 · 7 verses</div>
     <h2 data-src="muslim395,v:1:1-7,v:2:2-5,v:113:1,v:114:1,note">Al-Fatihah: five stages, five answers</h2>
     <p>In a hadith qudsi, the Prophet ﷺ reported that Allah divided the prayer between Himself and His servant in two halves, and answers each verse of al-Fatihah as it is recited. The first half praises Allah, the middle verse is shared, and the last half is the servant's request. The hadith begins from "Praise be to Allah"; the basmalah (1:1) opens the surah before these stages.</p>
     <div class="fat">
@@ -355,7 +378,7 @@ footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
   </section>
 
   <section class="sect" id="ring-sect">
-    <div class="eyebrow">Ring composition · Surah 2 · 286 verses</div>
+    <div class="eyebrow"><span class="part">Part 6</span>Ring composition · Surah 2 · 286 verses</div>
     <h2 data-src="farrin,farrinapp,v:2:143,note">The ring of al-Baqarah</h2>
     <p>Al-Baqarah was revealed over roughly nine years, yet its nine sections mirror one another around a centre: the first matches the last, the second matches the second-to-last, and so on. <b>Tap any section</b> to see it beside its mirror. Section boundaries follow Raymond Farrin's analysis and are approximate.</p>
     <div class="ring" id="ring" role="group" aria-label="Sections of al-Baqarah"></div>
@@ -363,7 +386,7 @@ footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
   </section>
 
   <section class="sect" id="links-sect">
-    <div class="eyebrow">Munasabat · links between neighbours</div>
+    <div class="eyebrow"><span class="part">Part 7</span>Munasabat · links between neighbours</div>
     <h2 data-src="biqai,tanasuq,quran">Where one surah hands off to the next</h2>
     <p>Classical scholars such as al-Biqa'i (<i>Nazm al-Durar</i>) and as-Suyuti traced how the close of one surah connects to the opening of the next. A selection of the clearest examples, in paraphrased translation. Each also appears as a highlighted connector in the mushaf list below.</p>
     <div class="links" id="links"></div>
@@ -730,7 +753,7 @@ function render(){
   if(order==="mushaf"){
     for(const [a,b,rn,th] of GROUPS){
       const items=D.slice(a-1,b).filter(vis);if(!items.length)continue;
-      h+=`<section class="group"><div class="ghead"><span class="eyebrow">Group ${rn} · surahs ${a}–${b}</span><h2 data-src="saleem,mir,islahi">${th}</h2></div>`;
+      h+=`<section class="group"><div class="ghead"><span class="eyebrow">Group ${rn} · surahs ${a}–${b}</span><h3 data-src="saleem,mir,islahi">${th}</h3></div>`;
       let n=a;
       while(n<=b){
         if(n===1){h+=filt!=="d"?`<div class="pair"><div class="pair-lab">Preface to the whole Quran</div>${rowHTML(D[0])}</div>`:"";n++;continue}
@@ -746,14 +769,14 @@ function render(){
                  ["d","Medinan surahs","28 surahs · 1,623 verses · community: worship, law, family, war and treaties","Listed in mushaf order. Few in number but long: under a quarter of the surahs, about a quarter of the verses, and most of the Quran's legislation."]];
     for(const [t,title,sub,intro] of parts){
       const items=D.filter(d=>d.t===t&&vis(d));if(!items.length)continue;
-      h+=`<section class="group period"><div class="ghead"><span class="eyebrow">${sub}</span><h2 data-src="tanzilorder,itqan">${title}</h2></div><p class="type-intro">${intro}</p>${items.map(rowHTML).join("")}</section>`;
+      h+=`<section class="group period"><div class="ghead"><span class="eyebrow">${sub}</span><h3 data-src="tanzilorder,itqan">${title}</h3></div><p class="type-intro">${intro}</p>${items.map(rowHTML).join("")}</section>`;
     }
   }else{
     const byC=[...D].sort((x,y)=>x.c-y.c);
     const parts=[["Meccan period","c. 610–622 CE · revelations 1–86",byC.slice(0,86)],["Medinan period","622–632 CE · revelations 87–114",byC.slice(86)]];
     for(const [t,sub,arr] of parts){
       const items=arr.filter(vis);if(!items.length)continue;
-      h+=`<section class="group period"><div class="ghead"><span class="eyebrow">${sub}</span><h2 data-src="tanzilorder,itqan">${t}</h2></div>${items.map(rowHTML).join("")}</section>`;
+      h+=`<section class="group period"><div class="ghead"><span class="eyebrow">${sub}</span><h3 data-src="tanzilorder,itqan">${t}</h3></div>${items.map(rowHTML).join("")}</section>`;
     }
   }
   list.innerHTML=h;attachSrc(list);
