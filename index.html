@@ -25,6 +25,7 @@
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
 .wrap{max-width:1080px;margin:0 auto;padding-block:28px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 h1{font-family:var(--display);font-weight:600;font-size:clamp(28px,5vw,40px);margin:0 0 6px;text-wrap:balance}
+.lede a{color:var(--accent)}
 .lede{color:var(--muted);max-width:68ch;margin:0 0 20px}
 .eyebrow{font-family:var(--label);text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--muted)}
 .controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:18px 0}
@@ -134,6 +135,18 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 #list-sect{scroll-margin-top:12px}
 .type-intro{color:var(--muted);font-size:14.5px;margin:-2px 0 8px;max-width:70ch}
 footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
+.mast{text-align:center;padding-block:clamp(22px,4vw,40px) clamp(18px,3vw,28px);border-bottom:1px solid var(--line)}
+.ar-b{font-family:var(--arabic);font-size:clamp(28px,5vw,40px);line-height:1.5;color:var(--accent);margin:0}
+.mast-bism-en{font-family:var(--label);font-size:13px;letter-spacing:.04em;color:var(--muted);margin:2px 0 14px}
+.mast h1{margin:0 0 16px}
+.mast-duas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px 32px;max-width:820px;margin:0 auto}
+.mast-duas p{margin:0;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0}
+.ar-d{font-family:var(--arabic);font-size:clamp(20px,3.2vw,24px);line-height:1.6}
+.d-en{font-size:15px}
+.mast-duas .ref{font-family:var(--label);font-size:12px;color:var(--muted)}
+.mast-note{font-size:14.5px;color:var(--muted);font-style:italic;border-left:3px solid var(--line);padding-left:12px;border-radius:0}
+.sect>p a{color:var(--accent)}
+#orders-sect .spine-box{margin-top:6px}
 .brief-h{font-family:var(--display);font-weight:600;font-size:22px;margin:22px 0 10px}
 .brief{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
 .bcard{display:flex;flex-direction:column;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;color:var(--ink);text-decoration:none;min-width:0;transition:border-color .12s}
@@ -214,50 +227,36 @@ footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
 <div class="wrap">
   <nav class="topnav" aria-label="Sections"><ul id="navlist">
     <li><a href="#overview">Overview</a></li>
+    <li><a href="#orders-sect">Two orders</a></li>
     <li><a href="#contrast-sect">Mecca &amp; Medina</a></li>
     <li><a href="#blocks-sect">Seven blocks</a></li>
+    <li><a href="#list-sect">Full list</a></li>
     <li><a href="#fatiha-sect">Al-Fatihah</a></li>
     <li><a href="#ring-sect">Ring of al-Baqarah</a></li>
     <li><a href="#links-sect">Neighbour links</a></li>
-    <li><a href="#list-sect">Full list</a></li>
   </ul></nav>
-  <div id="overview" style="padding-top:22px">
-  <aside class="preface" aria-label="Preface">
-    <p class="bism" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-    <p class="bism-en">In the name of Allah, the Most Merciful, the Ever-Merciful</p>
-    <div class="duas">
-      <div class="dua"><p class="d-ar" lang="ar" dir="rtl">رَّبِّ زِدْنِي عِلْمًا</p><p class="d-en">My Lord, increase me in knowledge.</p><a class="d-ref ref" href="https://quran.com/20/114" target="_blank" rel="noopener">Ta-Ha 20:114</a></div>
-      <div class="dua"><p class="d-ar" lang="ar" dir="rtl">رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا</p><p class="d-en">Our Lord, do not take us to task if we forget or make a mistake.</p><a class="d-ref ref" href="https://quran.com/2/286" target="_blank" rel="noopener">Al-Baqarah 2:286</a></div>
+  <header class="mast">
+    <p class="ar-b" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+    <p class="mast-bism-en">In the name of Allah, the Most Merciful, the Ever-Merciful</p>
+    <h1>Quran Order Map</h1>
+    <div class="mast-duas">
+      <p><span class="ar-d" lang="ar" dir="rtl">رَّبِّ زِدْنِي عِلْمًا</span><span class="d-en">My Lord, increase me in knowledge.</span><a class="ref" href="https://quran.com/20/114" target="_blank" rel="noopener">Ta-Ha 20:114</a></p>
+      <p><span class="ar-d" lang="ar" dir="rtl">رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا</span><span class="d-en">Our Lord, do not take us to task if we forget or make a mistake.</span><a class="ref" href="https://quran.com/2/286" target="_blank" rel="noopener">Al-Baqarah 2:286</a></p>
     </div>
-    <div class="note-body">
-      <p><b>A note before you begin.</b> This is not my own work. I did some research and wanted to bring together something useful from the scholars who have studied the Quran's structure: classical scholars such as al-Biqa'i and as-Suyuti, and modern scholars such as Amin Ahsan Islahi, Mustansir Mir and Raymond Farrin. Their sources are linked throughout the page.</p>
-      <p>The Quran is a miracle, and I believe that understanding it structurally holds real value and gives keys to understanding its meaning.</p>
-      <p>I ask Allah for His guidance, and for His forgiveness for any mistake made here. Whatever is correct is from Allah, and any error is my own.</p>
-    </div>
-  </aside>
-  <div class="eyebrow">114 surahs · 6,236 verses (Kufan count)</div>
-  <h1 data-src="tanzilmeta,tanzilorder,saleem">The Quran, in two orders</h1>
-  <p class="lede">This page looks at how the Quran is put together: the order of its 114 surahs in the mushaf, the order in which they were revealed, and the patterns scholars have found in that arrangement. Blue marks Meccan surahs and gold marks Medinan ones throughout.</p>
+  </header>
 
-  <h2 class="brief-h">What's on this page</h2>
-  <div class="brief">
-    <a class="bcard" href="#spine-anchor"><span class="b-n">The bar chart</span><span class="b-what">All 114 surahs as bars, in mushaf order, split into Meccan and Medinan, or in the order of revelation.</span><span class="b-why"><b>Purpose</b> To see at a glance how the arrangement of the mushaf differs from the order in which the surahs came down.</span></a>
-    <a class="bcard" href="#contrast-sect"><span class="b-n">Mecca &amp; Medina</span><span class="b-what">How the two phases of revelation differ in focus, style and who is addressed.</span><span class="b-why"><b>Purpose</b> To understand why the content moves from belief to building a community.</span><span class="b-ex"><b>Examples</b> Two verses from each period that show that difference in a sentence.</span></a>
-    <a class="bcard" href="#blocks-sect"><span class="b-n">Seven blocks</span><span class="b-what">Amin Ahsan Islahi's seven groups, each a consecutive run of the mushaf that moves from Meccan to Medinan surahs.</span><span class="b-why"><b>Purpose</b> To see the same movement, belief first and community second, repeated seven times.</span><span class="b-ex"><b>Examples</b> Tap any bar segment for verses showing what that stretch of surahs teaches.</span></a>
-    <a class="bcard" href="#fatiha-sect"><span class="b-n">Al-Fatihah</span><span class="b-what">Its five stages, Allah's reply to each from Sahih Muslim 395, and the Quran's own answer in al-Baqarah 2:2.</span><span class="b-why"><b>Purpose</b> To see how the opening prayer frames the whole Book, which then closes with prayers for refuge.</span><span class="b-ex"><b>Examples</b> Each verse of al-Fatihah beside its reply, then the verses that answer the request for guidance.</span></a>
-    <a class="bcard" href="#ring-sect"><span class="b-n">Ring of al-Baqarah</span><span class="b-what">Nine sections that mirror one another around verse 143, the exact middle of the surah.</span><span class="b-why"><b>Purpose</b> To see that a surah revealed over about nine years has a deliberate centre and matching halves.</span><span class="b-ex"><b>Examples</b> Tap a section to see verses from it and from its mirror, and what makes them a pair.</span></a>
-    <a class="bcard" href="#links-sect"><span class="b-n">Neighbour links</span><span class="b-what">Thirteen places where the end of one surah connects to the start of the next.</span><span class="b-why"><b>Purpose</b> To see the connections between surahs that classical scholars traced.</span><span class="b-ex"><b>Examples</b> The closing verse and the opening verse side by side, with the link explained.</span></a>
-    <a class="bcard" href="#list-sect"><span class="b-n">Full list</span><span class="b-what">All 114 surahs with Arabic name, meaning, theme, verse count, type and place in the order of revelation.</span><span class="b-why"><b>Purpose</b> A reference to explore by mushaf order, Meccan/Medinan, or revelation order.</span></a>
-  </div>
-  <p class="about-ex"><b>About the examples.</b> The verses on this page are chosen to illustrate the point of each section, not to summarise whole surahs. Their wording is a short paraphrase. Every verse reference links to Quran.com, where you can read the Arabic and full translations.</p>
+  <section class="sect" id="overview">
+    <div class="eyebrow">Start here</div>
+    <h2>Overview</h2>
+    <p>This page looks at how the Quran is put together: the order of its 114 surahs in the mushaf, the order in which they were revealed, and the patterns scholars have found in that arrangement. Blue marks Meccan surahs and gold marks Medinan ones throughout.</p>
+    <p>It moves through seven parts: <a href="#orders-sect">the two orders</a> of all 114 surahs, <a href="#contrast-sect">how Meccan and Medinan revelation differ</a>, <a href="#blocks-sect">Islahi's seven blocks</a> that each move from belief to community, <a href="#list-sect">a full list</a> of every surah you can sort, <a href="#fatiha-sect">al-Fatihah's five stages</a> and their answers, <a href="#ring-sect">the ring of al-Baqarah</a>, and <a href="#links-sect">links between neighbouring surahs</a>. The example verses in each part illustrate its point rather than summarise whole surahs; they are paraphrased, and each links to Quran.com for the Arabic and full translations.</p>
+    <p class="mast-note">This is not my own work. I gathered the research of classical and modern scholars, linked throughout, to put something useful in one place. The Quran is a miracle, and I believe understanding its structure gives keys to understanding it. I ask Allah for His guidance and His forgiveness for any mistake made here; whatever is correct is from Allah, and any error is my own.</p>
+  </section>
 
-
-  <div class="controls">
-    <a class="jump" href="#list-sect">Jump to the full list of 114 surahs ↓</a>
-    <div class="legend"><span><span class="dot" style="background:var(--mecca)"></span>Meccan</span><span><span class="dot" style="background:var(--medina)"></span>Medinan</span></div>
-  </div>
-
-  <div id="spine-anchor" class="sect" style="margin-top:22px"></div>
+  <section class="sect" id="orders-sect">
+    <div class="eyebrow">114 surahs · 6,236 verses (Kufan count)</div>
+    <h2 data-src="tanzilmeta,tanzilorder,saleem">The Quran, in two orders</h2>
+    <p>The mushaf is not arranged in the order of revelation. Switch the chart between the mushaf order, a Meccan / Medinan split, and the order of revelation; hover over a bar to see which surah it is.</p>
   <div class="spine-box" aria-label="Each bar is one surah; bar height shows its length">
     <div class="spine-top">
       <span class="tlab">Bar chart · 114 surahs</span>
@@ -272,7 +271,7 @@ footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
     <div class="spine-cap"><span id="cap-l">Al-Fatihah</span><span>bar height = number of verses (log scale)</span><span id="cap-r">An-Nas</span></div>
   </div>
   <p class="note" id="spine-note"></p>
-  </div>
+  </section>
 
   <section class="sect" id="contrast-sect">
     <div class="eyebrow">Two phases of the mission</div>
@@ -306,6 +305,27 @@ footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
     <div class="flow"><span>Belief (Mecca)</span><span>Community and law (Medina) →</span></div>
     <div class="detail" id="detail" aria-live="polite"></div>
   </section>
+
+  <div class="list-wrap">
+  <div class="sect" id="list-sect"><div class="eyebrow">Every surah</div><h2 data-src="tanzilmeta,tanzilorder,saleem">The full list</h2></div>
+  <div class="toolbar" id="toolbar">
+    <div class="tgroup"><span class="tlab">Arrange</span>
+      <div class="seg" role="group" aria-label="Arrange the list">
+        <button id="b-mushaf" aria-pressed="true">Mushaf order</button>
+        <button id="b-type" aria-pressed="false">Meccan / Medinan</button>
+        <button id="b-chron" aria-pressed="false">Revelation order</button>
+      </div></div>
+    <div class="tgroup"><span class="tlab">Show</span>
+      <div class="seg" role="group" aria-label="Show surahs">
+        <button id="f-all" aria-pressed="true">All <span class="cnt">114</span></button>
+        <button id="f-k" aria-pressed="false">Meccan <span class="cnt">86</span></button>
+        <button id="f-d" aria-pressed="false">Medinan <span class="cnt">28</span></button>
+      </div></div>
+    <span class="tstat" id="tstat" aria-live="polite"></span>
+  </div>
+
+  <div id="list"></div>
+  </div>
 
   <section class="sect" id="fatiha-sect">
     <div class="eyebrow">The opening · Surah 1 · 7 verses</div>
@@ -349,24 +369,6 @@ footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
     <div class="links" id="links"></div>
   </section>
 
-  <div class="sect" id="list-sect"><div class="eyebrow">Every surah</div><h2 data-src="tanzilmeta,tanzilorder,saleem">The full list</h2></div>
-  <div class="toolbar" id="toolbar">
-    <div class="tgroup"><span class="tlab">Arrange</span>
-      <div class="seg" role="group" aria-label="Arrange the list">
-        <button id="b-mushaf" aria-pressed="true">Mushaf order</button>
-        <button id="b-type" aria-pressed="false">Meccan / Medinan</button>
-        <button id="b-chron" aria-pressed="false">Revelation order</button>
-      </div></div>
-    <div class="tgroup"><span class="tlab">Show</span>
-      <div class="seg" role="group" aria-label="Show surahs">
-        <button id="f-all" aria-pressed="true">All <span class="cnt">114</span></button>
-        <button id="f-k" aria-pressed="false">Meccan <span class="cnt">86</span></button>
-        <button id="f-d" aria-pressed="false">Medinan <span class="cnt">28</span></button>
-      </div></div>
-    <span class="tstat" id="tstat" aria-live="polite"></span>
-  </div>
-
-  <div id="list"></div>
 
   <footer>
     <p><b>Sources and caveats.</b> Group boundaries and themes follow Islahi's <i>Tadabbur-i-Qur'an</i> as summarised by Shehzad Saleem and Mustansir Mir (<i>Coherence in the Qur'an</i>). Pairs are shown in Islahi's sequential scheme; in a few places he treats a surah as a supplement to a pair rather than a pair member, so check his commentary for the exact pairing inside Groups III–VI. Meccan and Medinan labels and the revelation sequence follow the 1924 Cairo (Al-Azhar) mushaf; that sequence is a traditional reconstruction, and scholars differ on the classification of about a dozen surahs, marked with a dotted underline. Surah themes are short summaries for orientation, not tafsir.</p>
@@ -642,7 +644,7 @@ function showRing(){
   document.querySelectorAll("#ring button").forEach(x=>{const on=x.dataset.r===a.k||x.dataset.r===b.k;x.classList.toggle("on",on);x.setAttribute("aria-pressed",on)});
 }
 function setupNav(){
-  document.querySelectorAll(".sect[id] > h2, #overview h1").forEach(h=>{
+  document.querySelectorAll(".sect[id] > h2").forEach(h=>{
     const id=h.closest("[id]").id;const a=document.createElement("a");
     a.className="anchor";a.href="#"+id;a.textContent="#";a.setAttribute("aria-label","Link to this section");
     a.addEventListener("click",()=>{try{const u=location.href.split("#")[0]+"#"+id;navigator.clipboard&&navigator.clipboard.writeText(u).then(()=>{const t=document.createElement("span");t.className="copied";t.textContent="Link copied";a.after(t);setTimeout(()=>t.remove(),1600)}).catch(()=>{})}catch(e){}});
