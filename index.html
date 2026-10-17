@@ -134,6 +134,17 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 #list-sect{scroll-margin-top:12px}
 .type-intro{color:var(--muted);font-size:14.5px;margin:-2px 0 8px;max-width:70ch}
 footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
+.brief-h{font-family:var(--display);font-weight:600;font-size:22px;margin:22px 0 10px}
+.brief{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.bcard{display:flex;flex-direction:column;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;color:var(--ink);text-decoration:none;min-width:0;transition:border-color .12s}
+.bcard:hover,.bcard:focus-visible{border-color:var(--accent);outline:none}
+.b-n{font-family:var(--display);font-weight:600;font-size:17px;color:var(--accent)}
+.b-n::after{content:" →";font-family:var(--label);font-size:14px}
+.b-what{font-size:14.5px}
+.b-why,.b-ex{font-size:14px;color:var(--muted)}
+.b-why b,.b-ex b{display:block;font-family:var(--label);font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink);font-weight:600}
+.about-ex{font-size:14.5px;color:var(--muted);max-width:72ch;margin:14px 0 0}
+@media (prefers-reduced-motion:reduce){.bcard{transition:none}}
 .preface{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:clamp(18px,4vw,32px);margin-bottom:28px;text-align:center}
 .preface .bism{font-family:var(--arabic);font-size:clamp(26px,5vw,36px);line-height:1.6;margin:0}
 .preface .bism-en{color:var(--muted);font-size:15px;margin:2px 0 18px}
@@ -226,13 +237,27 @@ footer{margin-top:44px;font-size:14px;color:var(--muted);max-width:72ch}
   </aside>
   <div class="eyebrow">114 surahs · 6,236 verses (Kufan count)</div>
   <h1 data-src="tanzilmeta,tanzilorder,saleem">The Quran, in two orders</h1>
-  <p class="lede">Switch between the mushaf order, arranged into Amin Ahsan Islahi's seven groups and surah pairs, and the traditional order of revelation used in the standard Cairo mushaf. Blue marks Meccan surahs and gold marks Medinan ones.</p>
+  <p class="lede">This page looks at how the Quran is put together: the order of its 114 surahs in the mushaf, the order in which they were revealed, and the patterns scholars have found in that arrangement. Blue marks Meccan surahs and gold marks Medinan ones throughout.</p>
+
+  <h2 class="brief-h">What's on this page</h2>
+  <div class="brief">
+    <a class="bcard" href="#spine-anchor"><span class="b-n">The bar chart</span><span class="b-what">All 114 surahs as bars, in mushaf order, split into Meccan and Medinan, or in the order of revelation.</span><span class="b-why"><b>Purpose</b> To see at a glance how the arrangement of the mushaf differs from the order in which the surahs came down.</span></a>
+    <a class="bcard" href="#contrast-sect"><span class="b-n">Mecca &amp; Medina</span><span class="b-what">How the two phases of revelation differ in focus, style and who is addressed.</span><span class="b-why"><b>Purpose</b> To understand why the content moves from belief to building a community.</span><span class="b-ex"><b>Examples</b> Two verses from each period that show that difference in a sentence.</span></a>
+    <a class="bcard" href="#blocks-sect"><span class="b-n">Seven blocks</span><span class="b-what">Amin Ahsan Islahi's seven groups, each a consecutive run of the mushaf that moves from Meccan to Medinan surahs.</span><span class="b-why"><b>Purpose</b> To see the same movement, belief first and community second, repeated seven times.</span><span class="b-ex"><b>Examples</b> Tap any bar segment for verses showing what that stretch of surahs teaches.</span></a>
+    <a class="bcard" href="#fatiha-sect"><span class="b-n">Al-Fatihah</span><span class="b-what">Its five stages, Allah's reply to each from Sahih Muslim 395, and the Quran's own answer in al-Baqarah 2:2.</span><span class="b-why"><b>Purpose</b> To see how the opening prayer frames the whole Book, which then closes with prayers for refuge.</span><span class="b-ex"><b>Examples</b> Each verse of al-Fatihah beside its reply, then the verses that answer the request for guidance.</span></a>
+    <a class="bcard" href="#ring-sect"><span class="b-n">Ring of al-Baqarah</span><span class="b-what">Nine sections that mirror one another around verse 143, the exact middle of the surah.</span><span class="b-why"><b>Purpose</b> To see that a surah revealed over about nine years has a deliberate centre and matching halves.</span><span class="b-ex"><b>Examples</b> Tap a section to see verses from it and from its mirror, and what makes them a pair.</span></a>
+    <a class="bcard" href="#links-sect"><span class="b-n">Neighbour links</span><span class="b-what">Thirteen places where the end of one surah connects to the start of the next.</span><span class="b-why"><b>Purpose</b> To see the connections between surahs that classical scholars traced.</span><span class="b-ex"><b>Examples</b> The closing verse and the opening verse side by side, with the link explained.</span></a>
+    <a class="bcard" href="#list-sect"><span class="b-n">Full list</span><span class="b-what">All 114 surahs with Arabic name, meaning, theme, verse count, type and place in the order of revelation.</span><span class="b-why"><b>Purpose</b> A reference to explore by mushaf order, Meccan/Medinan, or revelation order.</span></a>
+  </div>
+  <p class="about-ex"><b>About the examples.</b> The verses on this page are chosen to illustrate the point of each section, not to summarise whole surahs. Their wording is a short paraphrase. Every verse reference links to Quran.com, where you can read the Arabic and full translations.</p>
+
 
   <div class="controls">
     <a class="jump" href="#list-sect">Jump to the full list of 114 surahs ↓</a>
     <div class="legend"><span><span class="dot" style="background:var(--mecca)"></span>Meccan</span><span><span class="dot" style="background:var(--medina)"></span>Medinan</span></div>
   </div>
 
+  <div id="spine-anchor" class="sect" style="margin-top:22px"></div>
   <div class="spine-box" aria-label="Each bar is one surah; bar height shows its length">
     <div class="spine-top">
       <span class="tlab">Bar chart · 114 surahs</span>
