@@ -12,6 +12,7 @@ This is not original scholarship: it gathers the research of classical and moder
 - **Surah pairs**, with notes on the best-known pairs
 - **Al-Fatihah's five stages** and the answer to each (Sahih Muslim 395), and how al-Baqarah 2:2 answers its prayer for guidance
 - The **ring structure of al-Baqarah**: tap any section to see it beside its mirror, centred on verse 143
+- **Ayat al-Kursi** (2:255): its nine-phrase mirror structure, with the Arabic beside each line
 - **Links between neighbouring surahs** (munasabat), from the classical works of al-Biqa'i and as-Suyuti
 - A contents bar with bookmarks to every section, and shareable links on each heading
 - Hover over (or tap) any heading marked **ⓘ** to see its sources
@@ -29,7 +30,8 @@ Live site: **https://ihinds.github.io/quran-order-map/**
 - Jalal al-Din as-Suyuti, *al-Itqan fi 'Ulum al-Qur'an* and *Tanasuq al-Durar*
 - Burhan al-Din al-Biqa'i, *Nazm al-Durar*
 - Raymond Farrin, *Structure and Qur'anic Interpretation* (White Cloud Press, 2014)
-- Sahih Muslim 395, on [sunnah.com](https://sunnah.com/muslim:395)
+- Sahih Muslim 395 and 810, on [sunnah.com](https://sunnah.com/muslim:395)
+- “The Hidden Beauty of Ayatul Kursi's Mirror Structure”, [Tarteel](https://tarteel.ai/blog/the-hidden-beauty-of-ayat-al-kursis-mirror-structure/)
 - Verse references link to [Quran.com](https://quran.com)
 
 ## Notes

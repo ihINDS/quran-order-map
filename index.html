@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Interactive map of the Quran's structure: mushaf and revelation order, Islahi's seven groups and surah pairs, al-Fatihah's stages, the ring of al-Baqarah, Meccan and Medinan themes, and links between neighbouring surahs.">
+<meta name="description" content="Interactive map of the Quran's structure: mushaf and revelation order, Islahi's seven groups and surah pairs, al-Fatihah's stages, the rings of al-Baqarah and Ayat al-Kursi, Meccan and Medinan themes, and links between neighbouring surahs.">
 <style>*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}body{margin:0}[hidden]{display:none!important}</style>
 <title>Quran Order Map</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -277,6 +277,27 @@ html,body{overflow-x:clip}
 .wrap{padding-block-start:0}
 .mast .ar-b{line-height:1.8}
 .mast .mast-bism-en{margin-top:6px}
+
+.kursi{display:flex;flex-direction:column;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:4px}
+.kursi button{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:6px 14px;border:1px solid var(--line);background:var(--mecca-soft);color:var(--ink);padding:8px 14px;border-radius:6px;cursor:pointer;text-align:left;min-width:0;transition:background .12s,border-color .12s}
+.kursi .k-tag{font-family:var(--label);font-weight:600;font-size:13px;color:var(--accent);min-width:22px}
+.kursi .k-en{font-size:14.5px;min-width:0}
+.kursi .k-ar{font-family:var(--arabic);font-size:clamp(18px,2.4vw,22px);line-height:1.6;text-align:right}
+.kursi button.ctr{background:var(--medina-soft);border-color:var(--medina)}
+.kursi button.ctr .k-tag{color:var(--medina)}
+.kursi button.on{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.kursi button.on .k-tag{color:var(--bg)}
+.kursi button.ctr.on{background:var(--medina);border-color:var(--medina)}
+.kursi button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.kdetail{margin-top:12px;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:10px;padding:14px 18px}
+.kdetail h3{font-family:var(--display);font-weight:600;font-size:var(--fs-h3);margin:2px 0 10px}
+.k-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px 24px}
+.k-pair .k-ar{font-family:var(--arabic);font-size:clamp(22px,3vw,27px);line-height:1.7;margin:0;text-align:right}
+.k-pair .k-en{margin:2px 0 0;font-size:15px}
+.k-why{margin:12px 0 0;color:var(--muted);font-size:var(--fs-small);max-width:72ch}
+@media (max-width:600px){.kursi button{grid-template-columns:auto minmax(0,1fr)}.kursi .k-ar{grid-column:1/-1}}
+@media (prefers-reduced-motion:reduce){.kursi button{transition:none}}
+.kursi button{font-family:var(--body)}
 </style>
 
 </head>
@@ -290,6 +311,7 @@ html,body{overflow-x:clip}
     <li><a href="#list-sect">Full list</a></li>
     <li><a href="#fatiha-sect">Al-Fatihah</a></li>
     <li><a href="#ring-sect">Ring of al-Baqarah</a></li>
+    <li><a href="#kursi-sect">Ayat al-Kursi</a></li>
     <li><a href="#links-sect">Neighbour links</a></li>
   </ul></nav>
   <header class="mast">
@@ -318,7 +340,8 @@ html,body{overflow-x:clip}
           <li><a href="#list-sect"><span class="part">Part 4</span>Full list</a></li>
           <li><a href="#fatiha-sect"><span class="part">Part 5</span>Al-Fatihah</a></li>
           <li><a href="#ring-sect"><span class="part">Part 6</span>Ring of al-Baqarah</a></li>
-          <li><a href="#links-sect"><span class="part">Part 7</span>Neighbour links</a></li>
+          <li><a href="#kursi-sect"><span class="part">Part 7</span>Ayat al-Kursi</a></li>
+          <li><a href="#links-sect"><span class="part">Part 8</span>Neighbour links</a></li>
         </ol>
         <p class="ov-ex"><b>These are general thematic summaries, not rules.</b> They describe broad tendencies that scholars have observed, and many surahs and verses cross these lines. The example verses in each part illustrate its point rather than summarise whole surahs; they are paraphrased, and each links to Quran.com for the Arabic and full translations.</p>
       </div>
@@ -440,8 +463,16 @@ html,body{overflow-x:clip}
     <div class="rdetail" id="rdetail" aria-live="polite"></div>
   </section>
 
+  <section class="sect" id="kursi-sect">
+    <div class="eyebrow"><span class="part">Part 7</span>The greatest verse · Al-Baqarah 2:255</div>
+    <h2 data-src="tarteel,muslim810,v:2:255,note">Ayat al-Kursi: a ring within the ring</h2>
+    <p>The Prophet ﷺ called Ayat al-Kursi the greatest verse of the Book (Sahih Muslim 810). It sits in section B′ of al-Baqarah's ring, the section on Allah's creation and knowledge, and it has a mirror of its own: nine phrases around a centre that is also about His knowledge. <b>Tap any line</b> to see its pair. This mirror reading is a modern literary observation rather than classical tafsir.</p>
+    <div class="kursi" id="kursi" role="group" aria-label="Phrases of Ayat al-Kursi"></div>
+    <div class="kdetail" id="kdetail" aria-live="polite"></div>
+  </section>
+
   <section class="sect" id="links-sect">
-    <div class="eyebrow"><span class="part">Part 7</span>Munasabat · links between neighbours</div>
+    <div class="eyebrow"><span class="part">Part 8</span>Munasabat · links between neighbours</div>
     <h2 data-src="biqai,tanasuq,quran">Where one surah hands off to the next</h2>
     <p>Classical scholars such as al-Biqa'i (<i>Nazm al-Durar</i>) and as-Suyuti traced how the close of one surah connects to the opening of the next. A selection of the clearest examples, in paraphrased translation. Each also appears as a highlighted connector in the mushaf list below.</p>
     <div class="links" id="links"></div>
@@ -591,6 +622,8 @@ const SRC={
  farrin:["Raymond Farrin, Structure and Qur'anic Interpretation (White Cloud Press, 2014)","https://www.goodreads.com/book/show/18668161-structure-and-qur-anic-interpretation"],
  farrinapp:["“Teori Ring Structure Raimond Farrin dan Aplikasinya pada Q.S. Al-Baqarah”, Panangkaran journal, UIN Sunan Kalijaga","https://ejournal.uin-suka.ac.id/pusat/panangkaran/article/view/1405"],
  muslim395:["Sahih Muslim 395: the hadith qudsi on dividing the prayer (al-Fatihah) between Allah and His servant","https://sunnah.com/muslim:395"],
+ tarteel:["“The Hidden Beauty of Ayatul Kursi's Mirror Structure”, Tarteel","https://tarteel.ai/blog/the-hidden-beauty-of-ayat-al-kursis-mirror-structure/"],
+ muslim810:["Sahih Muslim 810: Ubayy ibn Ka'b names Ayat al-Kursi as the greatest verse","https://sunnah.com/muslim:810"],
  note:["Verse wording on this page is a paraphrase for illustration, not a formal translation",null]};
 function qurl(ref){const [s,a]=ref.replace(/–/g,"-").split(":");return `https://quran.com/${s}/${a}`}
 function resolve(k){if(k.startsWith("v:")){const r=k.slice(2);return [`Quran ${r} on Quran.com`,qurl(r)]}return SRC[k]}
@@ -737,6 +770,36 @@ function setupNav(){
     if(best)links.forEach(l=>{const on=l.getAttribute("href")==="#"+best;l.setAttribute("aria-current",on);if(on)l.scrollIntoView({block:"nearest",inline:"nearest"})})},{rootMargin:"-50px 0px -55% 0px"});
   targets.forEach(t=>io.observe(t));
 }
+const KURSI=[
+ {k:"A",lvl:0,ar:"اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",en:"Allah, there is no god but He, the Ever-Living, the Sustainer."},
+ {k:"B",lvl:1,ar:"لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ",en:"Neither drowsiness nor sleep overtakes Him."},
+ {k:"C",lvl:2,ar:"لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ",en:"To Him belongs whatever is in the heavens and the earth."},
+ {k:"D",lvl:3,ar:"مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ",en:"Who can intercede with Him except by His permission?"},
+ {k:"E",lvl:4,ar:"يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",en:"He knows what is before them and what is behind them."},
+ {k:"D2",lvl:3,ar:"وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ",en:"And they encompass nothing of His knowledge except what He wills."},
+ {k:"C2",lvl:2,ar:"وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ",en:"His Kursi extends over the heavens and the earth."},
+ {k:"B2",lvl:1,ar:"وَلَا يَئُودُهُ حِفْظُهُمَا",en:"Preserving them does not tire Him."},
+ {k:"A2",lvl:0,ar:"وَهُوَ الْعَلِيُّ الْعَظِيمُ",en:"He is the Most High, the Magnificent."}];
+const KLINK={
+ A:["His names","The verse opens with two of Allah's names, the Ever-Living and the Sustainer, and closes with two more, the Most High and the Magnificent."],
+ B:["He never lapses","No drowsiness or sleep overtakes Him, and keeping the heavens and the earth never tires Him: no gap in His care, at the start or the end of the day."],
+ C:["His dominion","Everything in the heavens and the earth belongs to Him, and His Kursi extends over the heavens and the earth: the same two realms, named on both sides."],
+ D:["Only as He allows","No one can intercede with Him except by His permission, and no one grasps any of His knowledge except what He wills. Nothing passes in either direction without Him."],
+ E:["The centre: His knowledge","At the exact middle stands His complete knowledge of what is before them and what is behind them. The same theme sits at the centre of the section of al-Baqarah that contains this verse."]};
+let ksel="E";
+function renderKursi(){
+  const el=document.getElementById("kursi");
+  el.innerHTML=KURSI.map(r=>`<button type="button" data-q="${r.k}" class="${r.k==="E"?"ctr":""}" style="margin-inline:calc(${r.lvl} * clamp(6px,3vw,40px))" aria-label="${r.k.replace("2","′")}: ${r.en}"><span class="k-tag">${r.k.replace("2","′")}</span><span class="k-en">${r.en}</span><span class="k-ar" lang="ar" dir="rtl">${r.ar}</span></button>`).join("");
+  el.addEventListener("click",e=>{const b=e.target.closest("button[data-q]");if(!b)return;ksel=b.dataset.q;showKursi()});
+  showKursi();
+}
+function showKursi(){
+  const base=ksel.slice(0,1),pair=base==="E"?["E"]:[base,base+"2"];
+  const rows=pair.map(k=>KURSI.find(r=>r.k===k));
+  document.getElementById("kdetail").innerHTML=`<div class="eyebrow">${base==="E"?"Centre":pair.map(k=>k.replace("2","′")).join(" ↔ ")}</div><h3>${KLINK[base][0]}</h3>
+   <div class="k-pair">${rows.map(r=>`<div><p class="k-ar" lang="ar" dir="rtl">${r.ar}</p><p class="k-en">${r.en}</p></div>`).join("")}</div><p class="k-why">${KLINK[base][1]}</p>`;
+  document.querySelectorAll("#kursi button").forEach(x=>{const on=pair.includes(x.dataset.q);x.classList.toggle("on",on);x.setAttribute("aria-pressed",on)});
+}
 const LK_END={1:"6-7",2:"286",3:"200",15:"99",17:"111",52:"49",53:"57",56:"96",93:"11",96:"19",105:"5",107:"7",113:"5"};
 const LK_START={1:"2",2:"1-2",3:"1",15:"1",17:"1-4",52:"1",53:"1",56:"1",93:"1",96:"1",105:"1",107:"1-2",113:"1"};
 const LINKS={
@@ -843,7 +906,7 @@ function setPressed(ids,on){ids.forEach(id=>document.getElementById(id).setAttri
 [["s-mushaf","mushaf"],["s-type","type"],["s-chron","chron"]].forEach(([id,v])=>document.getElementById(id).onclick=()=>{sord=v;setPressed(["s-mushaf","s-type","s-chron"],id);renderSpine()});
 [["b-mushaf","mushaf"],["b-type","type"],["b-chron","chron"]].forEach(([id,v])=>document.getElementById(id).onclick=()=>{order=v;setPressed(["b-mushaf","b-type","b-chron"],id);render()});
 [["f-all","all"],["f-k","k"],["f-d","d"]].forEach(([id,v])=>document.getElementById(id).onclick=()=>{filt=v;setPressed(["f-all","f-k","f-d"],id);render()});
-renderStatic();renderRing();setupNav();attachSrc(document);
+renderStatic();renderRing();renderKursi();setupNav();attachSrc(document);
 document.getElementById("blocks").addEventListener("click",e=>{const b=e.target.closest("button[data-k]");if(!b)return;sel=b.dataset.k;showDetail()});
 showDetail();
 render();
